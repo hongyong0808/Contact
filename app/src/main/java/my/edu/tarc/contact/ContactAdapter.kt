@@ -7,7 +7,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import my.edu.tarc.contact.model.Contact
 
-class ContactAdapter (private val contactList: List<Contact>): RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+    //Create a local version of dataset
+    private var contactList = emptyList<Contact>()
+
+    internal fun setContact(contact: List<Contact>){
+        contactList = contact
+        //tell recycle view data changed ad
+        notifyDataSetChanged()
+    }
 
     class ViewHolder(view: View):RecyclerView.ViewHolder(view) {
         //A view object hosting each record

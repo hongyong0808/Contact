@@ -3,35 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/ContactFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/ContactFragment"
         android:name="my.edu.tarc.contact.FirstFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_first">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_ContactFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
         <action
             android:id="@+id/action_FirstFragment_to_AddFragment"
             app:destination="@id/AddFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
-            app:popUpTo="@id/FirstFragment"
+            app:popUpTo="@id/ContactFragment"
             app:popEnterAnim="@anim/nav_default_enter_anim"
             app:popExitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/ProfileFragment"
         android:name="my.edu.tarc.contact.SecondFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_second">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/ContactFragment" />
     </fragment>
     <fragment
         android:id="@+id/AddFragment"
