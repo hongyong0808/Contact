@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/TARUC/AndroidStudioProjects/Contact/app/src/main/res/drawable/ic_baseline_person_add_alt_1_24.xml" value="0.2985" />
+        <entry key="..\:/Users/TARUC/AndroidStudioProjects/Contact/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.2985" />
+        <entry key="..\:/Users/TARUC/AndroidStudioProjects/Contact/app/src/main/res/drawable/ic_baseline_sync_24.xml" value="0.2985" />
+        <entry key="..\:/Users/TARUC/AndroidStudioProjects/Contact/app/src/main/res/menu/menu_main.xml" value="0.2972222222222222" />
         <entry key="..\:/Users/TARUC/Desktop/Contact/app/src/main/res/layout/contact_layout.xml" value="0.358695652173913" />
         <entry key="..\:/Users/TARUC/Desktop/Contact/app/src/main/res/layout/fragment_add.xml" value="0.358695652173913" />
         <entry key="..\:/Users/TARUC/Desktop/Contact/app/src/main/res/layout/fragment_add_contact.xml" value="0.358695652173913" />

@@ -22,4 +22,5 @@
     <string name="record_count">No. of Record</string>
     <string name="contact_saved">Contact Saved</string>
     <string name="no_record">No record.</string>
+    <string name="sync">Sync</string>
 </resources>

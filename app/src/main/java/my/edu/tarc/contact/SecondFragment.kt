@@ -4,12 +4,15 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import my.edu.tarc.contact.databinding.FragmentSecondBinding
 import java.io.File
 import java.io.FileNotFoundException
@@ -138,5 +141,21 @@ class SecondFragment : Fragment() {
             binding.imageViewPicture.setImageResource(R.drawable.ic_baseline_account_box_24)
         }
 
+        fun uploadPicture(){
+            val myStorage = Firebase.storage("https://console.firebase.google.com/project/contact-6a57b/storage/contact-6a57b.appspot.com/files")
+            val myProfilePic = myStorage.reference.child("images").child("012")
+
+            val filename = "profile.png"
+            val file = File(this.context?.filesDir, filename)
+
+            if(file.exists()){
+                myProfilePic.putFile(Uri.fromFile(file)).addOnSuccessListener {
+                    Toast.makeText(context?.applicationContext,"File uploaded",Toast.LENGTH_SHORT).show()
+                }
+            }catch (e: Exception){
+                e.printStackTrace()
+            }
+        }
     }
+
 }

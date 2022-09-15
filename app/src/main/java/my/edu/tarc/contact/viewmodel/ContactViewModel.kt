@@ -1,6 +1,7 @@
 package my.edu.tarc.contact.viewmodel
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
@@ -34,6 +35,15 @@ class ContactViewModel (application: Application): AndroidViewModel(application)
 
     fun update(contact: Contact) = viewModelScope.launch {
         contactRepository.update(contact)
+    }
+
+    fun syncContact(id: String){
+        if(contactList.value.isNullOrEmpty()){
+            contactRepository.syncContact(id)
+        }else{
+            Log.d("SynContact","contactList is null")
+        }
+
     }
 
 }
